@@ -75,6 +75,22 @@ body{font-family:var(--font);background:#EEF2F6;color:var(--gray-900);line-heigh
 .tag{font-size:11px;font-weight:600;padding:3px 8px;border-radius:7px;background:var(--gray-100);color:var(--gray-600);white-space:nowrap;}
 .tag.focus{background:var(--sky-50);color:var(--sky-700);}
 
+/* upcoming = agenda with divider after time */
+.agenda{background:#fff;border:1px solid #EEF0F3;border-radius:16px;box-shadow:0 2px 10px rgba(17,24,39,.05);overflow:hidden;}
+.aitem{display:flex;align-items:center;gap:14px;padding:14px 16px;}
+.aitem+.aitem{border-top:1px solid var(--gray-100);}
+.aitem .atime{width:48px;flex-shrink:0;line-height:1.2;}
+.aitem .atime b{font-size:14px;font-weight:700;color:var(--gray-800);display:block;}
+.aitem .atime small{font-size:11px;color:var(--gray-400);font-weight:600;}
+.aitem .accent{width:3px;align-self:stretch;min-height:42px;border-radius:3px;background:var(--sky-400);flex-shrink:0;}
+.aitem .ainfo{flex:1;min-width:0;}
+.aitem .ainfo .nm{font-size:15px;font-weight:700;color:var(--gray-900);line-height:1.2;}
+.aitem .ainfo .sub{font-size:12.5px;color:var(--gray-500);margin-top:3px;white-space:nowrap;}
+.aitem .atrainer{display:flex;flex-direction:column;align-items:center;gap:5px;flex-shrink:0;}
+.aitem .atrainer small{font-size:10.5px;font-weight:600;color:var(--gray-600);white-space:nowrap;line-height:1;}
+.aitem .av{width:46px;height:46px;border-radius:50%;overflow:hidden;flex-shrink:0;background:var(--sky-100);}
+.aitem .av img{width:100%;height:100%;object-fit:cover;display:block;}
+
 /* World Record strip */
 .wr{display:flex;align-items:center;gap:13px;background:linear-gradient(110deg,#1E3A8A,#3B82F6);color:#fff;border-radius:18px;padding:16px 18px;box-shadow:0 4px 16px rgba(30,58,138,.18);}
 .wr .medal{font-size:32px;line-height:1;flex-shrink:0;}
@@ -155,20 +171,18 @@ body{font-family:var(--font);background:#EEF2F6;color:var(--gray-900);line-heigh
 
     <div class="lbl">Upcoming Today <a>This week ›</a></div>
 
-    <div class="scard">
-      <div class="who"><div class="thumb"><img src="https://i.pravatar.cc/120?img=45" alt="Trishala"></div><small>Trishala</small></div>
-      <div class="info">
-        <div class="t">8:30 AM</div>
-        <div class="n">Strong Everyday</div>
-        <div class="tags"><span class="tag focus">Core + Mobility</span><span class="tag">45 min</span></div>
+    <div class="agenda">
+      <div class="aitem">
+        <div class="atime"><b>8:30</b><small>AM</small></div>
+        <span class="accent"></span>
+        <div class="ainfo"><div class="nm">Strong Everyday</div><div class="sub">Core + Mobility · 45 min</div></div>
+        <div class="atrainer"><div class="av"><img src="https://i.pravatar.cc/120?img=45" alt="Trishala"></div><small>Trishala</small></div>
       </div>
-    </div>
-    <div class="scard">
-      <div class="who"><div class="thumb"><img src="https://i.pravatar.cc/120?img=32" alt="Trainer"></div></div>
-      <div class="info">
-        <div class="t">5:30 PM</div>
-        <div class="n">Evening Stretch</div>
-        <div class="tags"><span class="tag focus">Gentle</span><span class="tag">30 min</span></div>
+      <div class="aitem">
+        <div class="atime"><b>5:30</b><small>PM</small></div>
+        <span class="accent"></span>
+        <div class="ainfo"><div class="nm">Evening Stretch</div><div class="sub">Gentle · 30 min</div></div>
+        <div class="atrainer"><div class="av"><img src="https://i.pravatar.cc/120?img=32" alt="Kashish"></div><small>Kashish</small></div>
       </div>
     </div>
 
